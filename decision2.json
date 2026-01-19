@@ -1,0 +1,13 @@
+{
+  "model": "gpt-4-turbo",
+  "config": {
+    "temperature": 0.2
+  },
+  "prompt": "Summarize the key findings from the attached quarterly report.",
+  "context_sources": [
+    "q1_report_final.docx"
+  ],
+  "output": "The quarterly report shows a 15% increase in revenue year-over-year, primarily driven by the new product line introduced in the previous quarter. However, operational costs also rose by 22%, impacting net profit margins.",
+  "confidence": 0.99,
+  "risk_flags": []
+}

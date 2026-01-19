@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "decision-trace"
+version = "0.1.0"
+authors = [
+  { name="Gemini", email="gemini@google.com" },
+]
+description = "An append-only audit log for AI decisions."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pydantic",
+    "click",
+    "rich",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/pypa/sampleproject" # Placeholder
+"Bug Tracker" = "https://github.com/pypa/sampleproject/issues" # Placeholder
+
+[project.scripts]
+decisiontrace = "decisiontrace.cli:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

@@ -1,0 +1,15 @@
+{
+  "model": "llama3.2:1b-instruct",
+  "config": {
+    "temperature": 0.7,
+    "max_tokens": 1024
+  },
+  "prompt": "Should we approve a loan for user_id 12345?",
+  "context_sources": [
+    "internal_policy_v4.1.pdf",
+    "user_credit_report_-345.json"
+  ],
+  "output": "Approval recommended based on high credit score and low debt-to-income ratio.",
+  "confidence": 0.95,
+  "risk_flags": ["user_pii_involved"]
+}
