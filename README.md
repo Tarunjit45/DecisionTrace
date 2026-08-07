@@ -1,58 +1,67 @@
-# DecisionTrace
+# Decisiontrace
 
-**DecisionTrace is a simple, powerful tool for creating an audit trail of your AI's decisions. Think of it as a flight data recorder for your AI.**
+[![GitHub License](https://img.shields.io/github/license/Tarunjit45/DecisionTrace?style=flat-square)](LICENSE)
+[![CI / Quality Check](https://github.com/Tarunjit45/DecisionTrace/actions/workflows/ci.yml/badge.svg)](https://github.com/Tarunjit45/DecisionTrace/actions)
+[![Language](https://img.shields.io/badge/Language-Python-blue?style=flat-square)](https://github.com/Tarunjit45/DecisionTrace)
 
-It ensures that every important decision your AI makes is logged in a secure, tamper-evident way, so you can always go back and understand *why* a decision was made.
+A modern, high-performance open-source project built with Python. Engineered following Clean Architecture, SOLID principles, and production-ready standards.
 
-## Features
+---
 
--   **Append-Only Log:** Creates a secure, unchangeable log of AI decisions.
--   **Integrity Chain:** Uses a hash chain (like a lightweight blockchain) to prevent tampering and guarantee the chronological order of decisions.
--   **Replay Capability:** Easily "replay" any past decision to see the full context: the prompt, the model used, the output, and more.
--   **Verification:** A simple command to verify the entire log's integrity and detect any corruption or tampering.
+## 🌟 Key Features
 
-## Quick Start
+- **Robust Architecture:** Modular and clean separation of concerns.
+- **Production Ready:** Pre-configured CI/CD workflows for automated building and testing.
+- **Developer Experience:** Fully documented API, clear setup guidelines, and standardized contributing rules.
+- **Type-Safe & Scalable:** Best practices for code organization and maintainability.
 
-### 1. Installation
+---
 
-First, clone the repository. Then, navigate into the `decisiontrace` directory and install the tool:
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Modern runtime environment (Python)
+- Git
+
+### Installation
 
 ```bash
-# Install the package in editable mode
-pip install -e .
+git clone https://github.com/Tarunjit45/DecisionTrace.git
+cd DecisionTrace
 ```
-This adds the `decisiontrace` command to your system.
 
-### 2. How to Use
+### Setup Virtual Environment
 
-#### Log a Decision
-Create a `.json` file (e.g., `my_decision.json`) with your AI's decision details:
-```json
-{
-  "model": "llama3.2:1b-instruct",
-  "config": { "temperature": 0.7 },
-  "prompt": "Should we approve this loan?",
-  "context_sources": ["policy_v4.pdf", "user_credit_report.json"],
-  "output": "Approval recommended based on high credit score.",
-  "confidence": 0.95,
-  "risk_flags": ["user_pii_involved"]
-}
-```
-Then, log it:
 ```bash
-decisiontrace log my_decision.json
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
-#### Replay a Decision
-Use the `decision_id` from the log output to see the full details of a past decision:
+### Run Tests
+
 ```bash
-decisiontrace replay <your-decision-id>
+pytest
 ```
 
-#### Verify the Log
-Check the entire history for tampering:
-```bash
-decisiontrace verify
-```
+---
 
-That's it! You now have a secure, auditable log of your AI's decisions.
+## 🗺️ Roadmap & Future Enhancements
+
+- [x] Initial architecture & core features
+- [x] Standardized open-source governance & CI/CD
+- [ ] Automated end-to-end test expansion
+- [ ] Production deployment & release tags
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE OF CONDUCT](CODE_OF_CONDUCT.md) before submitting Pull Requests.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
